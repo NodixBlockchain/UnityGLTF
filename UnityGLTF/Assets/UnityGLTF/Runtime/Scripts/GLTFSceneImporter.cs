@@ -350,12 +350,12 @@ namespace UnityGLTF
 
 			onLoadComplete?.Invoke(LastLoadedScene, null);
 		}
-
+		/*
 		public IEnumerator LoadScene(int sceneIndex = -1, bool showSceneObj = true, Action<GameObject, ExceptionDispatchInfo> onLoadComplete = null)
 		{
 			return LoadSceneAsync(sceneIndex, showSceneObj, onLoadComplete).AsCoroutine();
 		}
-
+		*/
 		/// <summary>
 		/// Loads a node tree from a glTF file into the LastLoadedScene field
 		/// </summary>

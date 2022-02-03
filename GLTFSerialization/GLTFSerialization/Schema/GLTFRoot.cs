@@ -98,6 +98,8 @@ namespace GLTF.Schema
 		/// </summary>
 		public List<GLTFTexture> Textures;
 
+		public string objKey;
+
 		public GLTFRoot()
 		{
 		}
@@ -333,6 +335,12 @@ namespace GLTF.Schema
 					case "textures":
 						root.Textures = jsonReader.ReadList(() => GLTFTexture.Deserialize(root, jsonReader));
 						break;
+					case "objKey":
+						root.objKey = jsonReader.ReadAsString();
+						//Debug.Log("read objKey");
+
+
+					break;
 					default:
 						root.DefaultPropertyDeserializer(root, jsonReader);
 						break;
